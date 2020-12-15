@@ -48,7 +48,7 @@ jobs:
       - name: Wait untill DB started (workaround of https://github.com/Harmon758/postgresql-action/issues/7)
         uses: jakejarvis/wait-action@v0.1.0
         with:
-          time: '5s'
+          time: '10s'
    
       - name: Collect Docker Logs
         uses: jwalton/gh-docker-logs@v1.0.0
