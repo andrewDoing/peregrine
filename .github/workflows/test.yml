@@ -39,9 +39,9 @@ jobs:
           # Version of PostgreSQL to use
           postgresql version: 9.4 # optional, default is latest
           # POSTGRES_DB - name for the default database that is created
-          postgresql db: postgres # optional, default is 
+          postgresql db: automated_test # optional, default is 
           # POSTGRES_USER - create the specified user with superuser power
-          postgresql user: test # optional, default is 
+          postgresql user: postgres # optional, default is 
           # POSTGRES_PASSWORD - superuser password
           postgresql password: test # optional, default is
           
