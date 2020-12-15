@@ -43,7 +43,18 @@ jobs:
           # POSTGRES_USER - create the specified user with superuser power
           postgresql user: test # optional, default is 
           # POSTGRES_PASSWORD - superuser password
-          postgresql password: test # optional, default is 
+          postgresql password: test # optional, default is
+          
+      - name: Wait untill DB started (workaround of https://github.com/Harmon758/postgresql-action/issues/7)
+        uses: jakejarvis/wait-action@v0.1.0
+        with:
+          time: '5s'
+   
+      - name: Collect Docker Logs
+        uses: jwalton/gh-docker-logs@v1.0.0
+   
+      - name: Check running containers
+        run: docker ps -a
 
       - name: before_install
         run: |
