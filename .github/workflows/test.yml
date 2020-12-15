@@ -47,7 +47,7 @@ jobs:
           time: '10s'
           
       - name: Fix connection bug maybe
-        run: rm /usr/local/var/postgres/postmaster.pid
+        run: rm /var/postgres/postmaster.pid
            
       - name: Collect Docker Logs
         uses: jwalton/gh-docker-logs@v1.0.0
