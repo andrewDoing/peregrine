@@ -10,7 +10,7 @@ fuzzywuzzy==0.6.1
 addict~=2.1
 Flask==1.1.1
 Flask-Cors==1.9.0
-gen3authz==0.2.1
+gen3authz==1.0.4
 Jinja2==2.10.1
 lxml==4.4.1
 MarkupSafe==0.23
@@ -33,8 +33,8 @@ psqlgraph==3.0.0
 gen3datamodel==3.0.1
 cdis_oauth2client==1.0.0
 git+https://git@github.com/NCI-GDC/cdisutils.git@8a8e599fdab5ade9bd8c586132d974a102e5d72d#egg=cdisutils
-cdispyutils==1.0.4
+cdispyutils==1.0.5
 git+https://git@github.com/uc-cdis/storage-client.git@1.0.0#egg=storageclient
 git+https://git@github.com/uc-cdis/graphql-core.git@cdis2.0.0#egg=graphql-core
-cdiserrors==0.1.2
+cdiserrors==1.0.0
 cdislogging==1.0.0
