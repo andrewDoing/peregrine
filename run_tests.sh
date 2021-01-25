@@ -1,14 +1,14 @@
 #!/bin/sh
 
+sudo service postgresql start
 
-service postgresql start
+sudo -u postgres psql -c "CREATE USER postgres WITH PASSWORD 'test';";
+sudo -u postgres psql -d template1 -c "CREATE USER test WITH PASSWORD 'test';"
+sudo -u postgres psql -c "create database test_userapi" -U postgres
 
-su - postgres
-psql -d template1 -c "ALTER USER postgres WITH PASSWORD '';"
-
-psql -c "create database test_userapi" -U postgres
-userdatamodel-init --db test_userapi
 python bin/setup_test_database.py
 mkdir -p tests/resources/keys; cd tests/resources/keys; openssl genrsa -out test_private_key.pem 2048; openssl rsa -in test_private_key.pem -pubout -out test_public_key.pem; cd -
 
-py.test -vv --cov=peregrine --cov-report xml tests
+python3 -m pytest ./tests
+
+sudo service postgresql stop

@@ -17,5 +17,10 @@ pip install -r requirements.txt
 
 [OpenAPI documentation available here.](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/uc-cdis/peregrine/master/openapis/swagger.yaml)
 
-YAML file for the OpenAPI documentation is found in the `openapi` folder (in
-the root directory); see the README in that folder for more details.
+See the [README](peregrine/openapis/README.md) in `peregrine/openapis` for more details.
+
+## Run the tests locally
+1. Complete the Setup section.
+2. `sudo apt install postgresql`
+3. `pip install -r dev-requirements.txt`
+4. `./run_tests.sh`
